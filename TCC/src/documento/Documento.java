@@ -5,12 +5,10 @@ public class Documento {
 	private int id;
 	private int codigoTipo;
 	private Date dataCriacao;
-	private int codPaciente;
-	public Documento(int id, int codigoTipo, Date dataCriacao, int codPaciente) {
+	public Documento(int id, int codigoTipo, Date dataCriacao) {
 		this.id = id;
 		this.codigoTipo = codigoTipo;
 		this.dataCriacao = dataCriacao;
-		this.codPaciente = codPaciente;
 	}
 	public int getId() {
 		return id;
@@ -31,11 +29,6 @@ public class Documento {
 		this.dataCriacao = dataCriacao;
 	}
 	
-
-	public int getCodPaciente() {
-		return codPaciente;
-	}
-	public void setCodPaciente(int codPaciente) {
-		this.codPaciente = codPaciente;
-	}
+	
+	
 }

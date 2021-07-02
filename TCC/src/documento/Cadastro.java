@@ -1,28 +1,28 @@
 package documento;
 
+import pessoa.Nome;
+
 import java.util.Date;
 
-import pessoa.Nome;
 import pessoa.DocumentoPessoal;
 import pessoa.Raca;
 import pessoa.Sexo;
 import pessoa.Telefone;
 
-public class CadastroPaciente {
-	private int id;
+public class Cadastro extends Documento {
 	private Nome nome;
 	private DocumentoPessoal cpf;
 	private DocumentoPessoal identidade;
 	private Nome nomeMae;
-	private Date dtNascimento;
+	private Data dtNascimento;
 	private Raca raca;
 	private Sexo sexo;
 	private Telefone telefoneContato;
 	private Telefone whattsApp;
-	public CadastroPaciente(int id, Nome nome, DocumentoPessoal cpf,
-			DocumentoPessoal identidade, Nome nomeMae, Date dtNascimento, Raca raca, Sexo sexo,
+	public Cadastro(int id, int codigoTipo, Date dataCriacao, Nome nome, DocumentoPessoal cpf,
+			DocumentoPessoal identidade, Nome nomeMae, Data dtNascimento, Raca raca, Sexo sexo,
 			Telefone telefoneContato, Telefone whattsApp) {
-		this.id= id;
+		super(id, codigoTipo, dataCriacao);
 		this.nome = nome;
 		this.cpf = cpf;
 		this.identidade = identidade;
@@ -35,12 +35,6 @@ public class CadastroPaciente {
 	}
 	public Nome getNome() {
 		return nome;
-	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
 	}
 	public void setNome(Nome nome) {
 		this.nome = nome;
@@ -63,10 +57,10 @@ public class CadastroPaciente {
 	public void setNomeMae(Nome nomeMae) {
 		this.nomeMae = nomeMae;
 	}
-	public Date getDtNascimento() {
+	public Data getDtNascimento() {
 		return dtNascimento;
 	}
-	public void setDtNascimento(Date dtNascimento) {
+	public void setDtNascimento(Data dtNascimento) {
 		this.dtNascimento = dtNascimento;
 	}
 	public Raca getRaca() {
@@ -94,7 +88,4 @@ public class CadastroPaciente {
 		this.whattsApp = whattsApp;
 	}
 	
-	
-	
-
 }
